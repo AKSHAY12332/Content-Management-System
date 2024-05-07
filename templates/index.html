@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Content Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .article {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Welcome to the Content Management System</h1>
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-md-6">
+                    <div class="article p-3 border rounded">
+                        <h2>{{ article[1] }}</h2>
+                        <p>{{ article[2] }}</p>
+                        <a href="{{ url_for('article', id=article[0]) }}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('create') }}" class="btn btn-success mt-4">Create New Article</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger mt-4">Logout</a>
+    </div>
+</body>
+</html>
