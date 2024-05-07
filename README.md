@@ -16,5 +16,5 @@ Logout - Click on the "Logout" button to log out of your account.
 - SQLite database engine.
 
 
-NOTE: The "Edit" button is not visible while specifically seleccting the article to read more, but edit option is working fine when we enter in the url (For example: 127.0.0.1:5000/edit/1). I'm working on it to make the button visible.
+NOTE: The "Edit" button is not visible while specifically selecting the article to read more, but edit option is working fine when we enter in the url (For example: 127.0.0.1:5000/edit/1). I'm working on it to make the button visible.
 
